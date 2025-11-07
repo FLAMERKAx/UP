@@ -1,4 +1,4 @@
-def count_occurrences(text, substring):
+def server_module(text, substring):
     if substring == "":
         return 0
     count = 0
@@ -11,7 +11,7 @@ def count_occurrences(text, substring):
         start = index + 1
     return count
 
-def main():
+def user_module():
     print("=== Подсчёт количества вхождений строки ===")
     text = input("Введите первую строку: ").strip()
     substring = input("Введите подстроку для поиска: ").strip()
@@ -23,9 +23,8 @@ def main():
         return
     if text == substring:
         print("Строки совпадают.")
-    result = count_occurrences(text, substring)
+    result = server_module(text, substring)
     print(f"Количество вхождений: {result}")
 
 
-if __name__ == "__main__":
-    main()
+user_module()
